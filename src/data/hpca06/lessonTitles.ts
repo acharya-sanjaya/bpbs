@@ -1,0 +1,15 @@
+export const hpca06 = {
+  l01: "Human Body",
+  l02: "Community Health and Mental Health",
+  l03: "Nutrition and Food Security",
+  l04: "Diseases, Safety and First Aid",
+  l05: "Sexual and Reproductive Health",
+  l06: "Physical Education and Drills",
+  l07: "Athletics and Adventure Activities",
+  l08: "Games",
+  l09: "Yoga",
+  l10: "Introduction to Arts, Lines and Colours",
+  l11: "Print Making, Clay Works, Collage and Construction",
+  l12: "Singing and Musical Instruments",
+  l13: "Dancing and Acting",
+};
