@@ -1,6 +1,6 @@
-// import type {FillGapExercise, MCQExercise, TechnicalTermsExercise, TrueFalseExercise} from "@data/ExerciseTypes";
+import type {ExerciseType} from "@data/ExerciseTypes";
 
-export const l16 = [
+export const l16: ExerciseType[] = [
   {
     type: "classroom",
   },
