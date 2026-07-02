@@ -1,4 +1,4 @@
-import {b, e, type ChapterType, g} from "@data/NoteTypes";
+import {b, e, g, type ChapterType} from "@data/NoteTypes";
 
 export const l01: ChapterType = [
   {

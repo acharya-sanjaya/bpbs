@@ -10,6 +10,9 @@ import Exercises from "@pages/Exercises";
 import FullForms from "@components/FullForms";
 import PageNotFound from "@pages/PageNotFound";
 
+//
+import Icons from "./pages/temp/TEMP";
+
 const App = () => {
   return (
     <div className="font-mono select-none">
@@ -22,6 +25,7 @@ const App = () => {
         <Route path="/mode/:courseId/:lessonId" element={<LearningMode />} />
         <Route path="/exercises/:courseId/:lessonId" element={<Exercises />} />
         <Route path="fullforms" element={<FullForms />} />
+        <Route path="explore" element={<Icons />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

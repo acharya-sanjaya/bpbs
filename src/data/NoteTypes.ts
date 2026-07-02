@@ -2,6 +2,7 @@ export type ImageBlock = {
   src: string;
   alt: string;
   caption: string;
+  className?: string;
 };
 export type ListBlock = {
   label: string;
@@ -11,8 +12,10 @@ export type ListBlock = {
 export type TableBlock = {
   label: string;
   headers: {label: string; align?: "text-center" | "text-right"}[];
-  rows: string[][];
+  rows: TableRow[];
 };
+
+export type TableRow = string[] | {sectionLabel: string};
 
 export type ContentType =
   | {type: "text"; content: string[]}

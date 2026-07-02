@@ -21,13 +21,7 @@ export default function TableContent({label, headers, rows}: TableBlock) {
 
           <tbody>
             {rows.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                {row.map((cell, cellIndex) => (
-                  <td key={cellIndex} className={cn("border px-3 py-2", headers[cellIndex]?.align)}>
-                    <RenderHtml text={cell} />
-                  </td>
-                ))}
-              </tr>
+              <RowRenderer key={rowIndex} {...{row, headers}} />
             ))}
           </tbody>
         </table>
@@ -35,3 +29,30 @@ export default function TableContent({label, headers, rows}: TableBlock) {
     </div>
   );
 }
+
+type RowRendererProps = {
+  row: TableBlock["rows"][number];
+  headers: TableBlock["headers"];
+};
+
+const RowRenderer = ({row, headers}: RowRendererProps) => {
+  if (Array.isArray(row)) {
+    return (
+      <tr>
+        {row.map((cell, cellIndex) => (
+          <td key={cellIndex} className={cn("border px-3 py-2", headers[cellIndex].align)}>
+            <RenderHtml text={cell} />
+          </td>
+        ))}
+      </tr>
+    );
+  }
+
+  return (
+    <tr>
+      <td colSpan={99} className="border py-3 text-center text-xl font-bold">
+        <RenderHtml text={row.sectionLabel} />
+      </td>
+    </tr>
+  );
+};

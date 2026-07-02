@@ -1,6 +1,6 @@
 import type {ExerciseType} from "@data/ExerciseTypes";
 
-const l01: ExerciseType[] = [
+export const l01: ExerciseType[] = [
   {
     type: "fill",
     questions: [
@@ -137,5 +137,3 @@ const l01: ExerciseType[] = [
     ],
   },
 ];
-
-export default l01;
